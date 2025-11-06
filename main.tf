@@ -45,3 +45,10 @@ data "akamai_property" "my_property_id" {
 output "my_property_id" {
     value = data.akamai_property.my_property_id
 }
+
+
+locals {
+  ticket_id = "tf-3001"
+  group_id  = "g131831"
+  notes     = "${local.ticket_id} - ${local.group_id}"
+}
